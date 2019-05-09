@@ -20,12 +20,14 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/images"
             ],
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": ["../node_modules/jquery/dist/jquery.min.js",
+                        "../node_modules/bootstrap/dist/js/bootstrap.min.js"],
             "es5BrowserSupport": true
           },
           "configurations": {
@@ -82,10 +84,12 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": ["../node_modules/jquery/dist/jquery.min.js",
+                        "../node_modules/bootstrap/dist/js/bootstrap.min.js"],
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/images"
             ]
           }
         },

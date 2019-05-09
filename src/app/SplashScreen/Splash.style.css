@@ -1,6 +1,9 @@
-.BGWrapper{
-    background: #38b6ff;
-    height: 100%;
-    width: 100%;
-    border: none;
+.center-logo{
+   margin: 0;
+   position: absolute;           
+   top: 50%;         
+   left: 50%;    
+   text-align: center;
+   margin-right: -50%;       
+   transform: translate(-50%, -50%)
 }
