@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SplashScreen } from './SplashScreen/Splash.component';
 import { LocalPlace } from './LocalPlace/localplace.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SearchReq } from 'src/app/Services/searchreq.service';
 
 @NgModule({
   declarations: [
@@ -14,9 +16,10 @@ import { LocalPlace } from './LocalPlace/localplace.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [SearchReq],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
