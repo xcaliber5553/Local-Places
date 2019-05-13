@@ -5,16 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SplashScreen } from './SplashScreen/Splash.component';
 import { LocalPlace } from './LocalPlace/localplace.component';
-
+import { AgmCoreModule } from '@agm/core';
+import { Maps } from './Maps /maps.component';
 @NgModule({
   declarations: [
     AppComponent,
     SplashScreen,
-    LocalPlace
+    LocalPlace,
+    Maps
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAYShFmxemn04U5ZPuuCEVWuHSkB-URXS4'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
