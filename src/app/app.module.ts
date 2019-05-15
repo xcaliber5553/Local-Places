@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SearchReq } from 'src/app/Services/searchreq.service';
 import { AgmCoreModule } from '@agm/core';
 import { Maps } from './Maps/maps.component';
+import { GeoLocation } from './Services/geolocation.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,10 @@ import { Maps } from './Maps/maps.component';
     })
 
   ],
-  providers: [SearchReq],
+  providers: [
+    SearchReq,
+    GeoLocation
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

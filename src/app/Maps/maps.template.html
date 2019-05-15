@@ -11,9 +11,17 @@
       [longitude]="lng">
       
           <agm-info-window>
-          <strong>Search Near Coordinates</strong>
+          <strong>Your Location</strong>
           </agm-info-window>
 
       </agm-marker>
+
+      <agm-circle [latitude]="lat" [longitude]="lng" 
+      [radius]="CurrentRadius"
+      [fillColor]="'blue'"
+      [circleDraggable]="true"
+      [editable]="true">
+  </agm-circle>
+
 
 </agm-map>
