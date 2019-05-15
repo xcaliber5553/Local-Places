@@ -21,8 +21,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/assets/images",
-              "src/assets/Json"
+              "src/assets/images"
             ],
             "styles": [
               "src/styles.css"
@@ -98,8 +97,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/assets/images",
-              "src/assets/Json"
+              "src/assets/images"
             ]
           }
         },
