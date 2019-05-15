@@ -38,10 +38,12 @@ export class SearchReq {
     const httpOptions = new HttpHeaders({ 'Content-Type': 'application/json', "Access-Control-Allow-Methods": "GET, POST", "Access-Control-Allow-Origin": "http://localhost:4200" });
 
     // tslint:disable-next-line: max-line-length
-    this.ReqURL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=' + lat + ',' + lng + '&radius=1500&type=restaurant&keyword=cruise&key=ApiKeyContactAdmin';
+    this.ReqURL = '../assets/Json/SampleData.json';
+    // API URL = https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=' + lat + ',' + lng + '&radius=1500&type=restaurant&keyword=cruise&key=AIzaSyBQiw8r5TCe-6kRNRtuUh7iK6W1e37CNyo
+    //Replace in URL above in Live.
     //Substitute API For system to function
 
-    return this.http.get(this.ReqURL, { headers: httpOptions });
+    return this.http.get(this.ReqURL);
 
 
     /* Version Alpha 
