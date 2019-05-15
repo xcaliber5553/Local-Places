@@ -9,17 +9,15 @@ import { MouseEvent } from '@agm/core';
 })
 export class Maps{
   SearchCoords : Coords;
-    // google maps zoom level
-  zoom: number = 8;
-  latitude: number;
-  longitude: number;
+  // google maps zoom level
+  zoom = 8;
   // initial center position for the map
-  lat: number = 51.673858;
-  lng: number = 7.815982;
+  lat = 51.673858;
+  lng = 7.815982;
 
   mapClicked($event: MouseEvent) {
     this.SearchCoords.lat =  $event.coords.lat;
     this.SearchCoords.lng = $event.coords.lng;
-    console.log("Clicked Coords: ",this.SearchCoords.lat,this.SearchCoords.lng);
+    console.log('Clicked Coords: ', this.SearchCoords.lat, this.SearchCoords.lng);
   }
 }

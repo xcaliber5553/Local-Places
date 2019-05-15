@@ -4,7 +4,14 @@
     </div>
 
     <div class="col-4">
-        <h2>Results Here!</h2>
+        
         <button type="button" (click)="fetch()">Fetch Json Value</button>
+        <ul>
+            <li *ngFor="let place of result?.results">
+            <p>
+                <span>Name = {{place.name}}</span>
+            </p>
+            </li>
+        </ul>
     </div>
 </div>
