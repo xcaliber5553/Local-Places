@@ -16,11 +16,15 @@
 
       </agm-marker>
 
-      <agm-circle [latitude]="lat" [longitude]="lng" 
-      [radius]="CurrentRadius"
+      <agm-circle 
+      [latitude]="lat" 
+      [longitude]="lng" 
+      [radius]="SearchRadius"
       [fillColor]="'blue'"
-      [circleDraggable]="true"
-      [editable]="true">
+      [editable]="true"
+      (radiusChange)="radiusChanged($event)"
+      (centerChange)="centerChanged($event)">
+
   </agm-circle>
 
 

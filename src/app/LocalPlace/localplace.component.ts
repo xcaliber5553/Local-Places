@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SearchReq } from '../Services/searchreq.service';
-
+import { Coords } from '../TypeExtensions/coords.type';
 
 let count = 0;
 
@@ -9,23 +9,31 @@ let count = 0;
     templateUrl: './localplace.template.html',
     styleUrls: ['./localplace.style.css']
 })
-export class LocalPlace implements OnInit {
+// tslint:disable-next-line: component-class-suffix
+export class LocalPlace implements OnInit  {
 
     lat: number;
     lng: number;
     result: JSON;
 
+    // Shared Data From MAPs Component.
+    SearchCoords: Coords;
+    SearchRadius: number;
+    UserCoords: Coords;
+
+  
+
     constructor(private router: Router, private Request: SearchReq) {}
 
     ngOnInit() {
-        // do init at here for current route.
-        if (count == 0) {
+        // SplashScreen Loop and Launch
+            if (count == 0) {
             this.router.navigate(['LocalPlaces']);
             count = 1;
         }
-
     }
 
+   
     fetch() {
           // Hardcoded Lat and Lng has to be Retrived from Map at Mouse click.
           this.lat = -33.8670522;
