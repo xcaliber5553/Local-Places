@@ -55,10 +55,10 @@ export class Maps {
       }
 
       centerChanged($event: LatLngLiteral) {
+        console.log($event.lat , 'lat-lng', $event.lng);
+        // when Center Change api is in use, Use the below code to store the values
         // this.SearchCoords.lat = $event.lat;
         // this.SearchCoords.lng = $event.lng;
-        console.log($event.lat , 'lat-lng', $event.lng);
-        // console.log(this.SearchCoords);
       }
 
 }

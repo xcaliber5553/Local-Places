@@ -14,7 +14,7 @@ export class LocalPlace implements OnInit  {
 
     lat: number;
     lng: number;
-    result: JSON;
+    result: any;
 
     // Shared Data From MAPs Component.
     SearchCoords: Coords;
@@ -38,7 +38,7 @@ export class LocalPlace implements OnInit  {
           // Hardcoded Lat and Lng has to be Retrived from Map at Mouse click.
           this.lat = -33.8670522;
           this.lng = 151.1957362;
-          this.Request.GetResults(this.lat, this.lng).subscribe(
+          this.Request.GetResults().subscribe(
             data => {
             console.log(data);
             this.result = data;
