@@ -3,14 +3,14 @@
         <maps></maps>
     </div>
 
-    <div class="col-4">
+    <div class="col-4 scrollable">
         
         <button type="button" (click)="fetch()">Fetch Json Value</button>
         <ul>
             <li *ngFor="let place of result?.results">
-            <p>
+            <div class = "card">
                 <span>Name = {{place.name}}</span>
-            </p>
+            </div>
             </li>
         </ul>
     </div>

@@ -8,6 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { SearchReq } from 'src/app/Services/searchreq.service';
 import { AgmCoreModule } from '@agm/core';
 import { Maps } from './Maps/maps.component';
+import { GeoLocation } from './Services/geolocation.service';
+import { APIKEY } from './config.localplaces';  //Global Varibale that supplies API KEY. Go to config.localplace.ts//
 
 @NgModule({
   declarations: [
@@ -21,11 +23,14 @@ import { Maps } from './Maps/maps.component';
     AppRoutingModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBQiw8r5TCe-6kRNRtuUh7iK6W1e37CNyo'  //Change Before Commit
+      apiKey: APIKEY  //Global Varible for APIKEY Value
     })
 
   ],
-  providers: [SearchReq],
+  providers: [
+    SearchReq,
+    GeoLocation
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
