@@ -9,14 +9,16 @@ import { SearchReq } from 'src/app/Services/searchreq.service';
 import { AgmCoreModule } from '@agm/core';
 import { Maps } from './Maps/maps.component';
 import { GeoLocation } from './Services/geolocation.service';
-import { APIKEY } from './config.localplaces';  //Global Varibale that supplies API KEY. Go to config.localplace.ts//
+import { APIKEY } from './config.localplaces';
+import { ResultCardsComponent } from './result-cards/result-cards.component';  //Global Varibale that supplies API KEY. Go to config.localplace.ts//
 
 @NgModule({
   declarations: [
     AppComponent,
     SplashScreen,
     LocalPlace,
-    Maps
+    Maps,
+    ResultCardsComponent
   ],
   imports: [
     BrowserModule,

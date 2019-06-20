@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { SearchReq } from '../Services/searchreq.service';
 import { Coords } from '../TypeExtensions/coords.type';
@@ -11,7 +11,6 @@ let count = 0;
 })
 // tslint:disable-next-line: component-class-suffix
 export class LocalPlace implements OnInit  {
-
     lat: number;
     lng: number;
     result: any;
