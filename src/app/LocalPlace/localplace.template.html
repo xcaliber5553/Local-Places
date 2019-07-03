@@ -8,9 +8,7 @@
         <button type="button" (click)="fetch()">Fetch Json Value</button>
         <ul>
             <li *ngFor="let place of result?.results">
-            <div class = "card">
-                <span>Name = {{place.name}}</span>
-            </div>
+            <result-cards [CardContent]= "place" ></result-cards>
             </li>
         </ul>
     </div>
