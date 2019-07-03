@@ -20,7 +20,7 @@ export class LocalPlace implements OnInit  {
     SearchRadius: number;
     UserCoords: Coords;
 
-  
+
 
     constructor(private router: Router, private Request: SearchReq) {}
 
@@ -32,7 +32,7 @@ export class LocalPlace implements OnInit  {
         }
     }
 
-   
+
     fetch() {
           // Hardcoded Lat and Lng has to be Retrived from Map at Mouse click.
           this.lat = -33.8670522;
@@ -45,8 +45,6 @@ export class LocalPlace implements OnInit  {
             err => {
             console.log(err);
             }
-        );
+          );
     }
-
-
 }
